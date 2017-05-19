@@ -2,16 +2,16 @@
 // Require the autoload file, so PHP can autoload packages installed via Composer
 require 'vendor/autoload.php';
 
-// URI this test script can be accessed at. PHP's built-in web server is handy for this
+// URI this example script can be accessed at. PHP's built-in web server is handy for this
 // php -S 127.0.0.1:4000
-$test_page_URI = 'http://127.0.0.1:4000/test.php';
+$example_page_URI = 'http://127.0.0.1:4000/example.php';
 
 // Consumer key and secret obtained via SurveyGizmo OAuth Application Registration form
 // Visit https://app.surveygizmo.com/account/restful-register while logged in to SurveyGizmo
 $oauth_config = array(
     'consumer_key'               => 'aaaa0000aaaa0000aaaa0000',
     'consumer_secret'            => 'bbbbb1111bbbb11111bbb1111',
-    'oauth_callback'             => $test_page_URI
+    'oauth_callback'             => $example_page_URI
 );
 
 // Create wrapper object
@@ -60,7 +60,7 @@ if ($current_step === 2) {
     $ciphertext = Defuse\Crypto\Crypto::encrypt($access_token.'---SEPARATOR---'.$access_token_secret, $key);
     file_put_contents('database.txt', $ciphertext);
 
-    header('Location: ' . $test_page_URI . '?done=1');
+    header('Location: ' . $example_page_URI . '?done=1');
     die;
 }
 
