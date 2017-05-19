@@ -6,13 +6,13 @@ This example project uses Composer to manage and install packages, such as the s
 
 Visit https://getcomposer.org/ to download and install Composer.
 
-With Composer installed on your machine, download or clone this git repository, and then use Composer to install the dependencies.
+With Composer installed on your machine, clone this git repository and use Composer to install the dependencies, like so:
 
-	git clone https://github.com/spacenate/surveygizmo-api-php-example.git
-	cd surveygizmo-api-php-example
+	git clone https://github.com/spacenate/surveygizmo-api-php-example.git &&
+	cd surveygizmo-api-php-example &&
 	composer install
 
-Composer will download and install the packages required to a new directory called `vendor/`, and then you are ready to run the example script! PHP's built-in web server is handy for this.
+Composer will download and install the packages required to a new directory called `vendor/`, and then you are ready to run the example script! PHP's built-in web server is handy for this:
 
 	php -S 127.0.0.1:4000
 
