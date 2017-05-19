@@ -1,0 +1,12 @@
+{
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/spacenate/surveygizmo-api-php"
+        }
+    ],
+    "require": {
+        "spacenate/surveygizmo-api-php": "dev-master",
+        "defuse/php-encryption": "^2.1"
+    }
+}
